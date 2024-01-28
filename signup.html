@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="zoom logo.png">
+    <style>
+        h1
+        {
+            color: black;
+            font-size: x-large;
+        }
+        #zc_login
+        {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: flex;
+            justify-content: center;
+            line-height: 40px;
+            border-radius: 10px;   
+        }       
+        #login_form
+        {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: large;
+            font-weight: 500;
+            color: #10A310;
+        }
+        .login_flex
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .login_flex input
+        {
+            border-radius: 5px;
+            padding: 8px 28px;
+            
+        }
+        .social 
+        {
+            display: flex;
+            align-items: center;
+        }
+        #login
+        {
+            margin: 10px 0px 20px 0px;
+
+        }
+        #login:hover
+        {
+            background-color:lightgreen;
+        }
+        .signup-link
+        {
+            text-decoration: none;
+            margin-left: 60px;
+            box-shadow: rgba(146, 83, 83, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(23, 48, 28, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+
+            padding: 10px 20px;
+            border-radius: 3px;
+        }
+        
+              /* forms */
+
+              .wrap
+        {
+            
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            visibility: hidden;
+            position: fixed;
+            top: 0;
+            
+        }
+        .wrap>div
+        {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        #signup_logo
+        {
+            /* background-color: orange; */
+            display: flex;
+            flex-direction: column;
+            color: seagreen;
+            justify-content: space-around;
+            font-size: x-large;
+            align-items: center;
+
+        } #signup_logo img
+        {
+            /* background-color: seagreen; */
+            width: 180px;
+            height: 40px;
+            padding: 30px;
+
+        }
+        .wrap form div
+        {
+            display: flex;
+            padding: 5px 20px ;
+            color: black;
+        }
+        .wrap h1
+        {
+            font-size: medium;
+            text-align: center;
+            color: #10A310;
+
+        }
+        .wrap form
+        {
+            box-shadow: rgba(146, 83, 83, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(23, 48, 28, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+            padding: 10px 50px 30px;
+            background-color: rgba(209, 208, 208, 0.793);
+            border-radius: 12px;
+        }
+        .wrap input
+        {
+            padding: 10px 50px 6px 0px;
+        }
+        
+        #signup:hover
+        {
+            color: black;
+            background-color: seagreen;
+        }
+        #signup
+        {
+            color: #1f10a3;
+            padding: 10px 30px;
+            margin-left: 49px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: rgba(146, 83, 83, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(23, 48, 28, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;;
+        }
+        .signup:hover
+        {
+            color: black;
+            background-color: seagreen;
+        }
+        .signup
+        {
+            color: #1f10a3;
+            padding: 10px 30px;
+            margin-left: 49px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: rgba(146, 83, 83, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(23, 48, 28, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;;
+        }
+      
+        #login_Continue
+        {
+            top: 100% ;
+
+            background-color: #10A310;
+        }
+        #signup_form:target
+        {
+            visibility: visible;
+            background-image: url(https://cdn.pixabay.com/photo/2016/11/29/12/49/dark-1869611_960_720.jpg);
+            background-color: blueviolet;
+            background-size: cover;
+            /* background-position: 10%  0%; */
+            opacity: 1;
+            align-items: center;
+
+        }
+        .img{
+            
+            width: 20px;
+            height: 20px;
+            
+        }
+
+        </style>
+</head>
+<body>
+    <div id="zc_login">
+    <div>
+        <a href="index.html">
+            <img class="img" src="https://www.downloadclipart.net/large/left-arrow-png-file.png" alt="">
+        </a>
+    </div>
+        <div>
+            <img id="login_car" src="https://www.zoomcar.com/build/fb65fcc43b8bededb813e093ea2d47d3.svg" alt="loginlogo">
+            <h1>Enter details to login</h1>
+
+            <div class="login_flex">
+                <form id="login_form">
+                    <div>Enter your Email ID</div>
+                    <div>
+                        <input id="login_email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}"  placeholder="Enter Email " value=""  required>
+                    </div>
+                    <div>Password</div>
+                    <div>
+                        <input id="login_password" class="pwd" name="password" type="password" minlength="8" pattern="[a-z0-9._%+-]{8,50}"  placeholder="Password" value="" required>
+                    </div>
+                    <div>
+                        <input id="login" onclick="loginUser()" type="submit"  value="login">
+                    </div>
+                </form>
+                 
+            </div>
+            <h1>or Sign up Now!</h1>
+            <div ><a class="signup" href="#signup_form">Signup</a></div>
+
+            
+            <div class="social"><span>Continue via Social</span>
+                <img src="https://www.zoomcar.com/build/279de03b0c8ecdb4db56a79da6e775e6.svg" alt="g_logo">
+                <img src="https://www.zoomcar.com/build/62ba375ec1a9fbcbee9e9099181c8d38.svg" alt="fb_logo">
+            </div>
+
+        </div>
+    </div>
+        
+                                               <!-- FORMS LOGIN -->
+
+
+    <div class="wrap" id="signup_form">
+        <div>
+            <div id="signup_logo"><img src="https://www.zoomcar.com/images/zms-logo-white.png" alt="zoom logo"><div>Rental car services</div>
+            </div>
+            <form id="Signup_form">
+                <div><h1>Enter Details to signup</h1></div>
+                <div>
+                    <input id="signup_name" type="text" name="name"  placeholder="Name(as in driver's licence)" maxlength="50"  required>
+                </div>
+                <div>
+                    <input id="signup_email"  type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}"  placeholder="Enter Email " value="" required>
+                </div>
+                <div><h1>Set Password</h1></div>
+                <div>
+                    <input class="pwd" id="signup_password"  type="password" pattern="[a-z0-9._%+-]{8,50}" minlength="8" placeholder="Password" value="" required>
+                </div>
+
+                <div>
+                    <input  class="pwd" id="signup_confirmpwd"  type="password" pattern="[a-z0-9._%+-]{8,50}" minlength="8" placeholder="Confirm Password" value="" required>
+                </div>
+
+                <div>
+                    <input id="signup"  onclick="signupUser()" type="submit"  value="Sign-up"  >
+                </div>
+            </form>
+                
+
+        </div>
+    </div>
+
+</body>
+</html>
+<script>
+
+let userdata=JSON.parse(localStorage.getItem("userdata")) || [];
+
+function loginUser(){
+event.preventDefault()
+    
+
+    let mail = document.getElementById("login_email").value;
+    let pwd = document.getElementById("login_password").value;
+    
+    let validUser = false;
+    let userNotAllowed= false;
+
+    userdata.forEach(function(ele){
+    if(ele.email==mail && ele.password==pwd){
+        console.log(ele.email,ele.password)
+      validUser= true;
+    let currentUser=ele.name;
+    localStorage.setItem("loginName",currentUser);
+    
+    }
+     else if (ele.email==mail){
+        userNotAllowed=true
+        return
+      }
+    
+   })
+   if(validUser)
+   {
+    alert("Login Successful")
+    window.location.href="index.html"
+   }
+   else if(userNotAllowed)
+   {
+    alert("Wrong Password");
+   }
+   else
+   {
+    alert("user dosent exist");
+   }
+
+}
+
+
+
+                                            //    Signup Forms
+
+
+     function signupUser(){
+        
+
+    let   name = document.getElementById("signup_name").value;
+    let   email = document.getElementById("signup_email").value;
+    let   password = document.getElementById("signup_password").value;
+        
+    let obj={
+
+           name : name,
+           email : email,
+           password : password
+        };
+           
+        let confirmpwd = document.getElementById("signup_confirmpwd").value;
+        
+        userdata.forEach(function(elm){
+            if(elm.email==email){
+                alert("user already exist")
+                window.location.href="#";
+            }
+        })
+        
+       if (obj.password == confirmpwd)
+        {
+            userdata.push(obj)
+            localStorage.setItem("userdata",JSON.stringify(userdata))
+            window.location.href="#"
+        }
+        else {
+            alert("Incorrect Password ");
+        }
+        
+        
+    }
+
+</script>
